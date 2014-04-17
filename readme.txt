@@ -3,7 +3,7 @@ Contributors: gcorne
 Tags: image, editor, formatting, photo, TinyMCE
 Tested up to: 3.9
 Requires at least: 3.9
-tag: trunk
+tag: tags
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
