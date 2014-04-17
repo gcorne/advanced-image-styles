@@ -1,0 +1,62 @@
+# Copyright (C) 2014 Advanced Image Styles
+# This file is distributed under the same license as the Advanced Image Styles package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Advanced Image Styles 0.1\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/support/plugin/advanced-image-"
+"styles\n"
+"POT-Creation-Date: 2014-04-17 04:12:02+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2014-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: _inc/advanced-image-styles-tmpl.php:2
+msgid "Image Border"
+msgstr ""
+
+#: _inc/advanced-image-styles-tmpl.php:5
+msgid "Width"
+msgstr ""
+
+#: _inc/advanced-image-styles-tmpl.php:9
+msgid "Color"
+msgstr ""
+
+#: _inc/advanced-image-styles-tmpl.php:13
+msgid "Image Margins"
+msgstr ""
+
+#: _inc/advanced-image-styles-tmpl.php:16
+msgid "Left"
+msgstr ""
+
+#: _inc/advanced-image-styles-tmpl.php:20
+msgid "Top"
+msgstr ""
+
+#: _inc/advanced-image-styles-tmpl.php:24
+msgid "Right"
+msgstr ""
+
+#: _inc/advanced-image-styles-tmpl.php:28
+msgid "Bottom"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "Advanced Image Styles"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "Adjust an image's margins and border with ease in the Visual"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Gregory Cornelius"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://gregorycornelius.com"
+msgstr ""

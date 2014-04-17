@@ -1,0 +1,40 @@
+.image-details .advanced-image-styles {
+	clear: both;
+	margin-top: -8px;
+}
+
+.image-details .image-settings-group {
+	float: left;
+	width: 70%;
+	margin-top: 8px;
+}
+
+.image-details .advanced-image-styles::after {
+	content: '';
+	display: table;
+	clear: both;
+}
+
+.image-details .advanced-image-styles .group-label {
+	float: left;
+	width: 25%;
+	text-align: right;
+	margin: 32px 1% 0 1%;
+	line-height: 1.1;
+	font-size: 13px;
+	color: #666;
+}
+
+.image-details .advanced-image-styles label {
+	display: block;
+	float: left;
+}
+
+.image-details .advanced-image-styles label span {
+	display: block;
+}
+
+.image-details .advanced-image-styles input[type="text"] {
+	width: 5em;
+}
+
