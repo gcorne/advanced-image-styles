@@ -69,8 +69,13 @@
 
 		dom.setStyle( image, 'marginTop', marginTop );
 		dom.setStyle( image, 'marginBottom', marginBottom );
-		dom.setStyle( image, 'marginLeft', marginLeft );
-		dom.setStyle( image, 'marginRight', marginRight );
+		if ( 'center' !== model.get( 'align' ) ) {
+			dom.setStyle( image, 'marginLeft', marginLeft );
+			dom.setStyle( image, 'marginRight', marginRight );
+		} else {
+			dom.setStyle( image, 'marginLeft', null );
+			dom.setStyle( image, 'marginRight', null );
+		}
 
 	} );
 
@@ -78,8 +83,36 @@
 		className: 'advanced-image-styles',
 		template: wp.media.template('advanced-image-styles'),
 
+		initialize: function() {
+			wp.Backbone.View.prototype.initialize.apply( this, arguments );
+			this.listenTo( this.model, 'change:align', this.toggleInputs );
+		},
+
 		prepare: function() {
 			return this.model.toJSON();
+		},
+
+		render: function() {
+			wp.Backbone.View.prototype.render.apply( this, arguments );
+			this.toggleInputs( this.model, this.model.get( 'align' ) );
+			return this;
+		},
+
+		toggleInputs: function( model, align ) {
+			var $left = this.$el.find( '[data-setting="marginLeft"]' ),
+				$right = this.$el.find( '[data-setting="marginRight"]' );
+
+			if ( 'center' === align ) {
+				$left.val( 'auto' );
+				$right.val( 'auto' );
+				$left.prop('disabled', true );
+				$right.prop('disabled', true );
+			} else {
+				$left.val( model.get( 'marginLeft' ) );
+				$right.val( model.get( 'marginRight' ) );
+				$left.prop('disabled', false );
+				$right.prop('disabled', false );
+			}
 		}
 	} );
 
