@@ -13,7 +13,13 @@ Adjust an image's margins and border with ease in the Visual editor.
 
 == Changelog ==
 
+= 0.2 =
+* Disable left and right margin inputs when image alignment is set to center
+* Use color input type when available for border color.
+* Use empty fields as default so that a value of zero can be set.
+
+
 = 0.1 =
-Initial Version.
+* Initial Version.
 
 
