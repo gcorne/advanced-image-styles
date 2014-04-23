@@ -50,7 +50,7 @@
 				val = parseInt( val, 10 );
 			}
 
-			attributes[ key ] = _.isNaN( val ) ? 0 : val;
+			attributes[ key ] = _.isNaN( val ) ? '' : val;
 		} );
 
 		attributes.borderColor = dom.toHex( dom.getStyle( image, 'borderColor' ) );
@@ -67,26 +67,38 @@
 			dom = editor.dom,
 			image  = options.image,
 			model = frame.content.get().model,
-			border, marginTop, marginLeft, marginRight, marginBottom;
+			borderWidth = model.get('borderWidth'),
+			border = '',
+			margin;
 
-		if ( model.get('borderWidth') && model.get('borderWidth') !== '0' ) {
-			border =  model.get('borderWidth') + 'px solid ';
+		if ( borderWidth ) {
+			border = borderWidth + 'px solid ';
 			border += model.get('borderColor') ? model.get('borderColor' ) : '#000';
-			dom.setStyle( image, 'border', border );
-		} else {
-			dom.setStyle( image, 'border', '' );
 		}
 
-		marginTop = model.get( 'marginTop' ) ? model.get( 'marginTop' ) + 'px' : '';
-		marginBottom = model.get( 'marginBottom' ) ? model.get( 'marginBottom' ) + 'px' : '';
-		marginLeft = model.get( 'marginLeft' ) ? model.get( 'marginLeft' ) + 'px' : '';
-		marginRight = model.get( 'marginRight' ) ? model.get( 'marginRight' ) + 'px' : '';
+		dom.setStyle( image, 'border', border );
 
-		dom.setStyle( image, 'marginTop', marginTop );
-		dom.setStyle( image, 'marginBottom', marginBottom );
+		margin = {
+			top: model.get( 'marginTop' ),
+			bottom: model.get( 'marginBottom' ),
+			left: model.get( 'marginLeft' ),
+			right: model.get( 'marginRight' )
+		};
+
+		_.each( margin, function( val, key ) {
+			if ( val !== '' ) {
+				val = parseInt( val, 10 );
+				val = _.isNaN( val ) ? '' : val + 'px';
+			}
+			margin[ key ] = val;
+		});
+
+		dom.setStyle( image, 'marginTop', margin.top );
+		dom.setStyle( image, 'marginBottom', margin.bottom );
+
 		if ( 'center' !== model.get( 'align' ) ) {
-			dom.setStyle( image, 'marginLeft', marginLeft );
-			dom.setStyle( image, 'marginRight', marginRight );
+			dom.setStyle( image, 'marginLeft', margin.left );
+			dom.setStyle( image, 'marginRight', margin.right );
 		} else {
 			dom.setStyle( image, 'marginLeft', null );
 			dom.setStyle( image, 'marginRight', null );
