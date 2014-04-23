@@ -2,12 +2,12 @@
 	<span class="group-label"><?php esc_html_e( 'Image Border', 'advanced-image-styles' ); ?></span>
 	<div class="image-settings-group">
 		<label class="border-width">
-			<span><?php esc_html_e( 'Width', 'advanced-image-styles' ); ?></span>
+			<span><?php esc_html_e( 'Width', 'advanced-image-styles' ); ?> <small>(px)</small></span>
 			<input type="text" data-setting="borderWidth" value="{{ data.borderWidth }}" />
 		</label>
 		<label class="border-color">
 			<span><?php esc_html_e( 'Color', 'advanced-image-styles' ); ?></span>
-			<input type="text" data-setting="borderColor" value="{{ data.borderColor }}" />
+			<input type="{{ data.colorInputType }}" data-setting="borderColor" value="{{ data.borderColor }}" />
 		</label>
 	</div>
 	<span class="group-label"><?php esc_html_e( 'Image Margins', 'advanced-image-styles' ); ?></span>

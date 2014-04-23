@@ -1,9 +1,24 @@
 (function( $, wp, _ ) {
-	var AdvancedImageStylesView, frame;
+	var AdvancedImageStylesView, frame, supportsColorInput;
 
 	if ( ! wp.media.events ) {
 		return;
 	}
+
+	supportsColorInput =  _.memoize( function() {
+		var supported = false,
+			elem;
+
+		try {
+			elem = document.createElement( 'input' );
+			elem.type = 'color';
+			if ( 'color' === elem.type ) {
+				supported = true;
+			}
+		} catch( ex ) {}
+
+		return supported;
+	} );
 
 	function addAdvancedStylesView( view ) {
 		var advancedView;
@@ -89,7 +104,9 @@
 		},
 
 		prepare: function() {
-			return this.model.toJSON();
+			var data = this.model.toJSON();
+			data.colorInputType = supportsColorInput() ? 'color' : 'text';
+			return data;
 		},
 
 		render: function() {
