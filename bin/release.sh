@@ -64,15 +64,10 @@ cd $SVNPATH/trunk/
 # Add all new files that are not set to be ignored
 svn status | grep -v "^.[ \t]*\..*" | grep "^?" | awk '{print $2}' | xargs svn add
 
-svn commit --username=$SVNUSER -m "$COMMITMSG"
+svn commit --username=$SVNUSER -m "Version $NEWVERSION1"
 
 echo "Creating new SVN tag & committing it"
-cd $SVNPATH
-echo "svn copy trunk/ tags/$NEWVERSION1/"
-svn copy trunk/ tags/$NEWVERSION1/
-cd $SVNPATH/tags/$NEWVERSION1
-echo "svn commit --username=$SVNUSER -m Tag version $NEWVERSION1"
-svn commit --username=$SVNUSER -m "Tag version $NEWVERSION1"
+svn copy --username=$SVNUSER -m "Tag version $NEWVERSION1" $SVNURL/trunk $SVNURL/tags/$NEWVERSION1
 
 echo "Removing temporary directory $SVNPATH"
 rm -fr $SVNPATH/
