@@ -15,7 +15,7 @@
 
 class Advanced_Image_Styles {
 
-	const VERSION = '0.1';
+	const VERSION = '0.2';
 
 	public static function init() {
 		add_action( 'wp_enqueue_editor', array( __CLASS__, 'enqueue' ), 10, 1 );
