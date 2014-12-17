@@ -1,9 +1,9 @@
 === Advanced Image Styles ===
 Contributors: gcorne
 Tags: image, editor, formatting, photo, TinyMCE
-Tested up to: 3.9
+Tested up to: 4.1
 Requires at least: 3.9
-Stable tag: 0.2
+Stable tag: 0.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -13,11 +13,13 @@ Adjust an image's margins and border with ease in the Visual editor.
 
 == Changelog ==
 
+= 0.3 =
+* Improve look of the border color input
+
 = 0.2 =
 * Disable left and right margin inputs when image alignment is set to center
 * Use color input type when available for border color.
 * Use empty fields as default so that a value of zero can be set.
-
 
 = 0.1 =
 * Initial Version.

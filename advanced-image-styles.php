@@ -6,7 +6,7 @@
  * Author URI: http://gregorycornelius.com
  * Description: Adjust an image's margins and border with ease in the Visual
  * editor.
- * Version: 0.2
+ * Version: 0.3
  * License: GPL2+
  * Text Domain: advanced-image-styles
  * Domain Path: /languages/
