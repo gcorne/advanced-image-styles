@@ -6,7 +6,7 @@
  * Author URI: http://gregorycornelius.com
  * Description: Adjust an image's margins and border with ease in the Visual
  * editor.
- * Version: 0.3
+ * Version: 0.4
  * License: GPL2+
  * Text Domain: advanced-image-styles
  * Domain Path: /languages/
@@ -15,7 +15,7 @@
 
 class Advanced_Image_Styles {
 
-	const VERSION = '0.2';
+	const VERSION = '0.4';
 
 	public static function init() {
 		add_action( 'wp_enqueue_editor', array( __CLASS__, 'enqueue' ), 10, 1 );
