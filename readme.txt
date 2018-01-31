@@ -3,7 +3,7 @@ Contributors: gcorne
 Tags: image, editor, formatting, photo, TinyMCE
 Tested up to: 4.7
 Requires at least: 3.9
-Stable tag: 0.4
+Stable tag: 0.4.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -12,6 +12,9 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Adjust an image's margins and border with ease in the Visual editor.
 
 == Changelog ==
+
+= 0.4.1 =
+* Version bump
 
 = 0.4 =
 * Version bump
