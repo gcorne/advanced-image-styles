@@ -1,7 +1,7 @@
 === Advanced Image Styles ===
 Contributors: gcorne
 Tags: image, editor, formatting, photo, TinyMCE
-Tested up to: 4.4
+Tested up to: 4.7
 Requires at least: 3.9
 Stable tag: 0.4
 License: GPLv2 or later
