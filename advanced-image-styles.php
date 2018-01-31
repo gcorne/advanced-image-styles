@@ -4,8 +4,7 @@
  * Plugin Name: Advanced Image Styles
  * Author: Gregory Cornelius
  * Author URI: http://gregorycornelius.com
- * Description: Adjust an image's margins and border with ease in the Visual
- * editor.
+ * Description: Adjust an image's margins and border with ease in the Visual editor.
  * Version: 0.4.1
  * License: GPL2+
  * Text Domain: advanced-image-styles
